@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse data</title>
+</head>
+<body>
+    <h1>Browse data</h1>
+    {% if info|length > 0 %}
+        <ul>
+        {% for entry in info%}
+            <li><b>{{ entry[2] }}</b> ({{ entry[1] }})
+            <p>
+            {{ entry[3] }}
+            <hr>
+        {% endfor %}
+        </ul>
+    {% else %}
+        This blog is empty.
+    {% endif %}
+
+</body>
+</html>
